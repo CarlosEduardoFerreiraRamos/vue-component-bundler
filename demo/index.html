@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  </head>
+  <body>
+
+    <h1>Web component created by Vue:</h1>
+    <p>Folloes a Web Componenet generate by a Vue component.</p>
+    
+    <vue-web-component id="wvc"  msg="From father view"></vue-web-component>
+
+    <script src="../dist/my-vue-component.js"></script>
+
+  </body>
+  <script>
+    function listen() {
+        console.log('CLick Event')
+    }
+    function listenToCount($event) {
+        console.log('Count custon Event',$event)
+    }
+    var ebi = window.document.getElementById('wvc')
+    console.log('ebi', ebi)
+    ebi.addEventListener("count", listenToCount);
+    window.addEventListener("click", listen);
+  </script>
+</html>

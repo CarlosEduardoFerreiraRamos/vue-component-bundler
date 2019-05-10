@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>my-mock-project</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but my-mock-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    <script src="https://unpkg.com/vue"></script>
+    <!--Load the web component polyfill-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js"></script>
+    <!--Load your custom element-->
+
+    <script src="./../dist/vue-custom-element.js"></script>
+    
+    <vue-custom-element></vue-custom-element>  
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
